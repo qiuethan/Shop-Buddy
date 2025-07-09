@@ -1,0 +1,235 @@
+/* Instructions Placeholder */
+.instructions-placeholder {
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.instructions-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  padding-bottom: var(--spacing-6);
+  border-bottom: var(--border);
+}
+
+.instructions-header h2 {
+  color: var(--color-black);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.instructions-header p {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-base);
+  margin: 0;
+  font-weight: 500;
+}
+
+.instructions-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* Instruction Steps */
+.instruction-section {
+  padding: var(--spacing-6);
+  background-color: var(--color-gray-50);
+  border: var(--border);
+  border-radius: 0;
+  border-left: 4px solid var(--color-accent);
+}
+
+.instruction-section h3 {
+  color: var(--color-black);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.instruction-section p {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-base);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Examples Section */
+.examples-section {
+  padding: var(--spacing-6);
+  background-color: var(--color-gray-50);
+  border: var(--border);
+  border-radius: 0;
+}
+
+.examples-section h3 {
+  color: var(--color-black);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-6);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  text-align: center;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-5);
+}
+
+.example-card {
+  background-color: var(--color-white);
+  border: var(--border);
+  border-radius: 0;
+  padding: var(--spacing-5);
+  transition: all var(--transition-fast);
+}
+
+.example-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.example-card h4 {
+  color: var(--color-accent);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--spacing-4);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.example-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.example-card li {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--spacing-2);
+  padding-left: var(--spacing-4);
+  position: relative;
+}
+
+.example-card li:before {
+  content: "→";
+  color: var(--color-accent);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.example-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* Tips Section */
+.tips-section {
+  padding: var(--spacing-6);
+  background-color: var(--color-gray-50);
+  border: var(--border);
+  border-radius: 0;
+  border-left: 4px solid var(--color-accent);
+}
+
+.tips-section h3 {
+  color: var(--color-black);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-5);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.tip {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-base);
+  line-height: var(--leading-relaxed);
+  padding: var(--spacing-4);
+  background-color: var(--color-white);
+  border: var(--border);
+  border-radius: 0;
+  border-left: 3px solid var(--color-accent);
+}
+
+.tip strong {
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .instructions-placeholder {
+    padding: var(--spacing-4);
+  }
+
+  .instructions-header h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .instructions-header p {
+    font-size: var(--font-size-sm);
+  }
+
+  .instruction-section,
+  .examples-section,
+  .tips-section {
+    padding: var(--spacing-4);
+  }
+
+  .example-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+
+  .example-card {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .instructions-placeholder {
+    padding: var(--spacing-3);
+  }
+
+  .instructions-content {
+    gap: var(--spacing-6);
+  }
+
+  .instruction-section,
+  .examples-section,
+  .tips-section {
+    padding: var(--spacing-3);
+  }
+
+  .example-card {
+    padding: var(--spacing-3);
+  }
+
+  .instruction-section h3,
+  .examples-section h3,
+  .tips-section h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .example-card h4 {
+    font-size: var(--font-size-sm);
+  }
+} 
