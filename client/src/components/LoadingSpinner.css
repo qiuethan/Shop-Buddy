@@ -32,4 +32,39 @@
   color: #444;
   font-size: 1rem;
   margin-top: 8px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+  }
+
+  .loading-container {
+    padding: var(--spacing-6);
+  }
+
+  .loading-container p {
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .spinner {
+    width: 28px;
+    height: 28px;
+    border-width: 2px;
+  }
+
+  .loading-container {
+    padding: var(--spacing-4);
+  }
+
+  .loading-container p {
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-2);
+  }
 } 

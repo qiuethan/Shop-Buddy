@@ -323,65 +323,193 @@
   }
 }
 
+/* Enhanced Mobile Responsive Design */
 @media (max-width: 768px) {
   .search-form-container {
     padding: var(--spacing-3);
-    height: auto;
-    min-height: 100%;
+    padding-bottom: calc(var(--spacing-6) + env(safe-area-inset-bottom));
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
+
+  .search-form-header {
+    margin-bottom: var(--spacing-3);
+    padding-bottom: var(--spacing-2);
+    text-align: left;
+  }
+
+  .search-form-header h2 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-1);
+  }
+
+  .search-form-header p {
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-normal);
   }
 
   .input-group {
-    gap: var(--spacing-6);
-    flex: 1;
+    gap: var(--spacing-3);
+    padding-bottom: var(--spacing-4);
+  }
+
+  .problem-input {
+    min-height: 100px;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-base);
   }
 
   .filter-row {
     gap: var(--spacing-3);
   }
 
+  .filter-input,
+  .filter-select {
+    height: 40px;
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
+  }
+
+  .filter-label {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-1);
+  }
+
   .search-button {
-    min-width: 160px;
+    min-width: 100%;
     padding: var(--spacing-4) var(--spacing-6);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
   }
 
   .store-buttons {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2);
   }
 
   .store-button {
-    padding: var(--spacing-3) var(--spacing-4);
+    padding: var(--spacing-3) var(--spacing-2);
+    font-size: var(--font-size-xs);
+    flex-direction: column;
+    gap: var(--spacing-1);
+    min-height: 60px;
+  }
+
+  .store-icon {
+    font-size: var(--font-size-sm);
+  }
+
+  .store-name {
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-tight);
+  }
+
+  .stores-section h4 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .examples-section {
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .example-buttons {
+    gap: var(--spacing-2);
+  }
+
+  .example-button {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-tight);
   }
 }
 
 @media (max-width: 480px) {
   .search-form-container {
     padding: var(--spacing-2);
-    height: auto;
-    min-height: 100%;
+    padding-bottom: calc(var(--spacing-6) + env(safe-area-inset-bottom));
+    height: calc(100vh - 48px);
+  }
+
+  .search-form-header {
+    margin-bottom: var(--spacing-2);
+    padding-bottom: var(--spacing-2);
+  }
+
+  .search-form-header h2 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-1);
+  }
+
+  .input-group {
+    gap: var(--spacing-2);
+    padding-bottom: var(--spacing-4);
   }
 
   .problem-input {
-    padding: var(--spacing-3) var(--spacing-4);
-    min-height: 100px;
+    min-height: 80px;
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
   }
 
   .filter-input,
   .filter-select {
-    padding: var(--spacing-2) var(--spacing-3);
-  }
-
-  .search-button {
-    min-width: 140px;
-    padding: var(--spacing-3) var(--spacing-4);
+    height: 36px;
+    padding: var(--spacing-2);
     font-size: var(--font-size-sm);
   }
 
+  .search-button {
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
+    min-width: 100%;
+    margin-bottom: var(--spacing-4);
+  }
+
   .store-buttons {
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2);
   }
 
   .store-button {
-    padding: var(--spacing-2) var(--spacing-3);
+    padding: var(--spacing-2);
     font-size: var(--font-size-xs);
+    min-height: 50px;
+  }
+
+  .store-icon {
+    font-size: var(--font-size-xs);
+  }
+
+  .store-name {
+    font-size: var(--font-size-xs);
+  }
+
+  .stores-section h4 {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .example-button {
+    padding: var(--spacing-2);
+    font-size: var(--font-size-xs);
+    line-height: var(--leading-tight);
+  }
+
+  .examples-section {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .filter-row {
+    gap: var(--spacing-2);
+  }
+
+  .filter-label {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-1);
   }
 }

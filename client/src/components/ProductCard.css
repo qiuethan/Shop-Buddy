@@ -132,47 +132,123 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .product-card {
+    height: auto;
+    min-height: 300px;
+    margin-bottom: var(--spacing-3);
+  }
+
+  .product-card:hover {
+    transform: translateY(-1px);
+  }
+
+  .product-image-container {
+    height: 160px;
+  }
+
   .product-info {
     padding: var(--spacing-2);
   }
-  
+
   .product-title {
     font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-2);
+    -webkit-line-clamp: 2;
+    line-height: var(--leading-normal);
   }
-  
+
+  .product-price {
+    margin-bottom: var(--spacing-2);
+  }
+
   .price {
     font-size: var(--font-size-base);
+    padding: var(--spacing-1) var(--spacing-2);
   }
-  
+
+  .product-meta {
+    margin-bottom: var(--spacing-3);
+  }
+
+  .product-source {
+    font-size: var(--font-size-xs);
+  }
+
+  .product-rating {
+    margin-top: var(--spacing-1);
+  }
+
+  .rating {
+    font-size: var(--font-size-sm);
+  }
+
+  .reviews {
+    font-size: var(--font-size-xs);
+  }
+
   .view-product-btn {
     padding: var(--spacing-2) var(--spacing-4);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
+    width: 100%;
+  }
+
+  .view-product-btn:hover {
+    transform: translateY(-1px);
   }
 }
 
 @media (max-width: 480px) {
-  .product-image-container {
-    height: 160px;
+  .product-card {
+    min-height: 280px;
+    margin-bottom: var(--spacing-2);
   }
-  
+
+  .product-image-container {
+    height: 140px;
+  }
+
   .product-info {
     padding: var(--spacing-2);
   }
-  
+
   .product-title {
     font-size: var(--font-size-sm);
     margin-bottom: var(--spacing-2);
+    -webkit-line-clamp: 2;
   }
-  
+
   .product-price {
     margin-bottom: var(--spacing-2);
   }
-  
+
   .price {
     font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-2);
   }
-  
+
   .product-meta {
-    margin-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .product-source {
+    font-size: var(--font-size-xs);
+  }
+
+  .product-rating {
+    margin-top: var(--spacing-1);
+  }
+
+  .rating {
+    font-size: var(--font-size-xs);
+  }
+
+  .reviews {
+    font-size: var(--font-size-xs);
+  }
+
+  .view-product-btn {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
+    width: 100%;
   }
 } 
